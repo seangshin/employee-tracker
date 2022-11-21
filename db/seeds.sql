@@ -15,7 +15,7 @@ VALUES ("Software Engineer", 9, 1),
        ("Sales Lead", 6, 2 ),
        ("Logistics", 4, 4);
        
-INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Sean", "Shin", 2),
-       ("first", "last", 8),
-       ("Bill", "Nye", 1);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Sean", "Shin", 2, NULL),
+       ("first", "last", 8, 1),
+       ("Bill", "Nye", 1, 1);
