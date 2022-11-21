@@ -1,5 +1,6 @@
-//import and require mysql2 package
+//import and require mysql2 and console.table packages
 const mysql = require('mysql2');
+const cTable = require('console.table');
 
 //create connection
 const db = mysql.createConnection(
@@ -16,8 +17,10 @@ const db = mysql.createConnection(
 
   //class constructor
 class databaseQuery {
+
+    //method to display the department table within the database company_db
     viewDepartments() {
-        db.query('SELECT * FROM department', (err, result) => err ? console.log(err) : console.log(result) );
+        db.query('SELECT * FROM department', (err, results) => err ? console.log(err) : console.table(results) );
     }
 }
 
