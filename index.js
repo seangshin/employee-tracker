@@ -1,8 +1,10 @@
-//Import using require for the following: express, mysql2, inquirer
-const mysql = require('mysql2');
+//Import using require for the following: query.js (local), inquirer
 const inquirer = require('inquirer');
+const databaseQuery = require('./db/query');
+const db = new databaseQuery();//create an instance of class databaseQuery named db
 
 
+//Prompt user to select an option from the application menu
 inquirer.prompt([
     {
     type: "list",
@@ -47,6 +49,10 @@ inquirer.prompt([
     //for a resolved promise, pass in the answers (object) given by prompt
     .then((answers) => {
       console.log(answers.option);
+
+      if(answers.option===1) {
+        db.viewDepartments();
+      }
       
     })
     //for a rejected promise, output an error
