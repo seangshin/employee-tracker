@@ -18,6 +18,6 @@ VALUES ("Software Engineer", 9, 1),
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("John", "Doe", 2, NULL),
        ("Mike", "Chan", 1, 1),
-       ("Bill", "Rodriguez", 3, NULL);
-       ("Kevin", "Tupik", 5, NULL);
+       ("Bill", "Rodriguez", 3, NULL),
+       ("Kevin", "Tupik", 5, NULL),
        ("Sarah", "Allen", 6, 3);
